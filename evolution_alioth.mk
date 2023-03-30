@@ -8,19 +8,20 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common BananaDroid stuff.
-$(call inherit-product, vendor/banana/config/common.mk)
+# Inherit some common Evo stuff.
+$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 
-#Banana Stuffs
-BANANA_BUILD_TYPE := OFFICIAL
+#evo stuffs
 TARGET_FACE_UNLOCK_SUPPORTED := true
-BANANA_MAINTAINER := Abrar
+EVO_BUILD_TYPE := CARROT
+TARGET_USES_MINI_GAPPS := true
+TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_BOOT_ANIMATION_RES := 1080
 
 # Inherit from alioth device
 $(call inherit-product, device/xiaomi/alioth/device.mk)
 
-PRODUCT_NAME := banana_alioth
+PRODUCT_NAME := evolution_alioth
 PRODUCT_DEVICE := alioth
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
